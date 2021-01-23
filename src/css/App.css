@@ -1,0 +1,19 @@
+.app {
+    height: 100vh;
+}
+
+.app__header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 12vh; 
+}
+
+.app__logo {
+    height: 6vh;
+    margin-left: 10vw;
+}
+
+.app__body {
+
+}
