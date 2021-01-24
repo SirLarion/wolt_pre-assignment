@@ -1,7 +1,17 @@
 import React from 'react';
 
-const Carousel: React.FC = () => {
-    return <div></div>;
+import { RestaurantType } from '../types';
+
+
+interface Props { restaurants: RestaurantType[]; }
+
+const CarouselContainer: React.FC<Props> = ({ restaurants }) => {
+    const numVisibleRestaurants = 3;
+    return (
+        <div>
+            Carousel
+        </div>
+    );
 }
 
-export default Carousel;
+export default CarouselContainer;

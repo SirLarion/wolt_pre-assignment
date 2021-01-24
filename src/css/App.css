@@ -1,19 +1,36 @@
 .app {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.app__wrapper {
+    width: 85%;
 }
 
 .app__header {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-column-gap: 5vw;
     align-items: center;
     height: 12vh; 
+    margin-bottom: 8vh;
 }
 
 .app__logo {
-    height: 6vh;
-    margin-left: 10vw;
+    width: 8vmin;
+    margin-left: 5vw;
+}
+
+.app__discover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cantarell';
+    font-size: calc(2vh + 15px);
 }
 
 .app__body {
-
 }

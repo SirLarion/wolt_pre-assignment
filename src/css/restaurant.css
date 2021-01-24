@@ -1,0 +1,20 @@
+.restaurant {
+    max-height: calc(2.5vmax + 270px);
+    font-family: 'Cantarell';
+    font-size: 0.8vmax;
+    transition: all var(--hover-transition-duration);
+}
+
+.restaurant__blurhash {
+    mask: url('../resources/blurhash_mask.svg');
+    mask-size: 100% 100%;
+}
+
+.restaurant__title {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 2.5vmax;
+}
+
+.restaurant:hover { font-size: 1vmax; }
+

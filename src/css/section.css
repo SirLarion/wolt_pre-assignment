@@ -1,3 +1,43 @@
 .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8vh 0 8vh 0;
 
+}
+
+.section__wrapper {
+    width: 85%;
+}
+
+.section__header {
+    font-family: 'Montserrat';
+    font-size: calc(1vw + 10px);
+    margin-bottom: 4vh;
+}
+
+.section__body {
+}
+
+.section:hover .rec.rec-arrow {
+    color: #151515;
+}
+
+.rec .rec-arrow {
+    color: var(--invisible);
+    background-color: var(--invisible);
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+.rec .rec-arrow:enabled:hover {
+    color: #111111;
+    background-color: var(--invisible);
+    box-shadow: none;
+    font-size: 2em;
+}
+
+.rec .rec-arrow:enabled:focus {
+    background-color: var(--invisible);
+    box-shadow: none;
 }
