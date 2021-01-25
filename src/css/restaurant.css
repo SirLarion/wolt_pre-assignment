@@ -1,5 +1,6 @@
 .restaurant {
     max-height: calc(2.5vmax + 270px);
+    width: var(--blurhash-width);
     font-family: 'Cantarell';
     font-size: 0.8vmax;
     transition: all var(--hover-transition-duration);

@@ -2,11 +2,13 @@ import React from 'react';
 
 import '../css/section.css';
 
-//Carousel element by sag1v, https://github.com/sag1v/react-elastic-carousel
-import Carousel from 'react-elastic-carousel';
+// Carousel element by Maksim Marinich: https://github.com/maxmarinich/react-alice-carousel
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 import Restaurant from './Restaurant';
 import { SectionType, RestaurantType } from '../types';
+
 
 
 
@@ -22,6 +24,13 @@ function toRestaurantCard(restaurant: RestaurantType, index: number) {
     );
 }
 
+const responsive = {
+    1: { items: 1 },
+    650: { items: 2 },
+    975: { items: 3 },
+};
+
+
 //===================================================================/
 /*
  * Represents a section of the discovery page containing a list
@@ -30,11 +39,7 @@ function toRestaurantCard(restaurant: RestaurantType, index: number) {
  */
 const Section: React.FC<{ data: SectionType; }> = ({ data }) => {
 
-    const breakPoints = [
-        { width: 1, itemsToShow: 1 },
-        { width: 650, itemsToShow: 2, itemsToScroll: 2 },
-        { width: 975, itemsToShow: 3 }
-    ];
+    const items = data.restaurants.map(toRestaurantCard);
 
     return (
         <div className='section'>
@@ -43,13 +48,12 @@ const Section: React.FC<{ data: SectionType; }> = ({ data }) => {
                     { data.title }
                 </div>
                 <div className='section__body'>
-                    <Carousel 
-                        isRTL={false} 
-                        pagination={false}
-                        breakPoints={breakPoints}
-                    >
-                        { data.restaurants.map(toRestaurantCard) }
-                    </Carousel>
+                    <AliceCarousel 
+                        items={items} 
+                        responsive={responsive} 
+                        mouseTracking
+                        infinite
+                    />
                 </div>
             </div>
         </div>
