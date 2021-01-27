@@ -3,25 +3,28 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: var(--bg-color);
+    background-color: var(--primary-bg);
 }
 
 .app__wrapper {
-    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .app__header {
     display: grid;
-    grid-template-columns: 25vw 25vw 25vw;
-    grid-column-gap: 5vw;
     align-items: center;
-    height: 12vh; 
-    margin-bottom: 8vh;
+    width: 85%;
+    height: 14vh; 
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    margin: 2vh 0 2vmin 0;
 }
 
 .app__logo {
-    width: 8vmin;
-    margin-left: 5vw;
+    width: calc(20px + 5vmax);
+    margin-left: 35px;
 }
 
 .app__discover {
@@ -33,4 +36,5 @@
 }
 
 .app__body {
+    max-width: 100%;
 }

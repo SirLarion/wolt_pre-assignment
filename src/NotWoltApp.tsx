@@ -31,7 +31,9 @@ const NotWoltApp: React.FC = () => {
 
     return (
         <div className='app'>
-            <div className='app__wrapper'>
+            <div className={ 'app__wrapper '.concat(window.innerWidth >= 1300 ? 
+                    'wrapper--85' : 'wrapper--100')
+            }>
                 <div className='app__header'>
                     <img className='app__logo' src={logo} alt='Not Wolt' draggable={false} />
                     <div className='app__discover'>Discover</div>

@@ -24,10 +24,12 @@ function toRestaurantCard(restaurant: RestaurantType, index: number) {
     );
 }
 
+function isWide() { return window.innerWidth >= 1300; }
+
 const responsive = {
     1: { items: 1 },
-    650: { items: 2 },
-    975: { items: 3 },
+    400: { items: 2 },
+    1300: { items: 4 }
 };
 
 
@@ -43,8 +45,8 @@ const Section: React.FC<{ data: SectionType; }> = ({ data }) => {
 
     return (
         <div className='section'>
-            <div className='section__wrapper'>
-                <div className='section__header'>
+            <div className={ 'section__wrapper '.concat(isWide() ? 'wrapper--85' : 'wrapper--100') }>
+                <div className={ 'section__header'.concat(isWide() ? '' : ' section__header--padding') }>
                     { data.title }
                 </div>
                 <div className='section__body'>
@@ -53,6 +55,8 @@ const Section: React.FC<{ data: SectionType; }> = ({ data }) => {
                         responsive={responsive} 
                         mouseTracking
                         infinite
+                        swipeDelta={5}
+                        paddingLeft={35}
                     />
                 </div>
             </div>

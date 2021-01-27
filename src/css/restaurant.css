@@ -1,21 +1,36 @@
 .restaurant {
-    max-height: calc(2.5vmax + 270px);
-    width: var(--blurhash-width);
+    max-height: calc(0.6vmax + 30px + var(--blurhash-height));
+    width: calc(1vw +var(--blurhash-width));
     font-family: 'Cantarell';
-    font-size: 0.8vmax;
+    font-size: calc(0.6vmax + 7px);
     transition: all var(--hover-transition-duration);
 }
 
 .restaurant__blurhash {
+    width: var(--blurhash-width);
     mask: url('../resources/blurhash_mask.svg');
     mask-size: 100% 100%;
+}
+
+.blurhash__mask { 
+    width: var(--blurhash-width);
+    position: absolute;
+    z-index: 10;
+}
+
+.blurhash__mask--online {
+    opacity: 0.0;
+}
+
+.blurhash__mask--offline {
+    opacity: 0.4;    
 }
 
 .restaurant__title {
     display: grid;
     align-items: center;
-    grid-template-rows: 2.5vmax;
+    grid-template-rows: calc(0.6vmax + 30px);
 }
 
-.restaurant:hover { font-size: 1vmax; }
+.restaurant:hover { font-size: calc(0.6vmax + 13px); }
 

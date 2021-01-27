@@ -9,8 +9,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     --hover-transition-duration: 0.15s;
-    --bg-color: #FAFBFF;
+    --primary-bg: #FAFBFF;
+    --secondary-bg: #F8F9FD;
     --invisible: #00000000;
     --blurhash-width: 300px;
     --blurhash-height: 270px;
 }
+
+.wrapper--85 { width: 85%; }
+.wrapper--100 { width: 100%; }
