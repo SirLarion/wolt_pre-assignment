@@ -28,34 +28,7 @@
 
 .section__header--padding { margin-left: 35px; }
 
-
-.section__body {
-}
-
-/* Legacy
-.section:hover .rec.rec-arrow {
-    color: #151515;
-}
-
-.rec .rec-arrow {
-    color: var(--invisible);
-    background-color: var(--invisible);
-    box-shadow: none;
-    transition: all 0.3s;
-}
-
-.rec .rec-arrow:enabled:hover {
-    color: #111111;
-    background-color: var(--invisible);
-    box-shadow: none;
-    font-size: 2em;
-}
-
-.rec .rec-arrow:enabled:focus {
-    background-color: var(--invisible);
-    box-shadow: none;
-}
-*/
+.section__body {}
 
 .alice-carousel__dots { display: none !important; }
 .alice-carousel__prev-btn { display: none !important; }

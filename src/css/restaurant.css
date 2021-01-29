@@ -6,26 +6,6 @@
     transition: all var(--hover-transition-duration);
 }
 
-.restaurant__blurhash {
-    width: var(--blurhash-width);
-    mask: url('../resources/blurhash_mask.svg');
-    mask-size: 100% 100%;
-}
-
-.blurhash__mask { 
-    width: var(--blurhash-width);
-    position: absolute;
-    z-index: 10;
-}
-
-.blurhash__mask--online {
-    opacity: 0.0;
-}
-
-.blurhash__mask--offline {
-    opacity: 0.4;    
-}
-
 .restaurant__title {
     display: grid;
     align-items: center;

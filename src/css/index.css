@@ -12,9 +12,19 @@ body {
     --primary-bg: #FAFBFF;
     --secondary-bg: #F8F9FD;
     --invisible: #00000000;
+
     --blurhash-width: 300px;
     --blurhash-height: 270px;
 }
 
 .wrapper--85 { width: 85%; }
 .wrapper--100 { width: 100%; }
+
+.noselect {
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+}

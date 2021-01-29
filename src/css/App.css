@@ -24,7 +24,7 @@
 
 .app__logo {
     width: calc(20px + 5vmax);
-    margin-left: 35px;
+    margin-left: 2vw;
 }
 
 .app__discover {

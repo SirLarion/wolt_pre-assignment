@@ -7,6 +7,7 @@ import data from './resources/discovery_page.json';
 
 import Section from './components/Section';
 import { SectionType } from './types';
+import { isWide } from './utils';
 
 /*
  * Helper method for mapping list of sections to corresponding divs
@@ -31,11 +32,11 @@ const NotWoltApp: React.FC = () => {
 
     return (
         <div className='app'>
-            <div className={ 'app__wrapper '.concat(window.innerWidth >= 1300 ? 
+            <div role='wrapper' className={ 'app__wrapper '.concat(isWide() ? 
                     'wrapper--85' : 'wrapper--100')
             }>
                 <div className='app__header'>
-                    <img className='app__logo' src={logo} alt='Not Wolt' draggable={false} />
+                    <img className='app__logo' src={logo} alt='NotWolt logo' draggable={false} />
                     <div className='app__discover'>Discover</div>
                 </div>
                 <div className='app__body'>
