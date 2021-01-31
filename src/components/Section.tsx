@@ -24,9 +24,11 @@ function toRestaurantCard(restaurant: RestaurantType, index: number) {
 }
 
 
+/* Mapping of screen sizes to the corresponding amount of elements that should
+ * be shown in the carousel */
 const responsive = {
     1: { items: 1 },
-    400: { items: 2 },
+    560: { items: 2 },
     1300: { items: 4 }
 };
 
@@ -34,8 +36,8 @@ const responsive = {
 //===================================================================/
 /*
  * Represents a section of the discovery page containing a list
- * of restaurants filtered according to a certain rule (e.g. 'nearby',
- * 'popular', 'new' etc.)
+ * of restaurants in a carousel filtered according to a certain rule 
+ * (e.g. 'nearby', 'popular', 'new' etc.)
  */
 const Section: React.FC<{ data: SectionType; }> = ({ data }) => {
 
@@ -43,21 +45,21 @@ const Section: React.FC<{ data: SectionType; }> = ({ data }) => {
 
     return (
         <div className='section'>
-            <div role='wrapper' className={ 'section__wrapper '.concat(isWide() ? 'wrapper--85' : 'wrapper--100') }>
-                <div className={ 'noselect section__header'.concat(isWide() ? '' : ' section__header--padding') }>
-                    { data.title }
+                <div role='wrapper' className={ 'section__wrapper '.concat(isWide() ? 'wrapper--85' : 'wrapper--100') }>
+                    <div className={ 'noselect section__header'.concat(isWide() ? '' : ' section__header--padding') }>
+                        { data.title }
+                    </div>
+                    <div className='section__body'>
+                        <AliceCarousel 
+                            items={items} 
+                            responsive={responsive} 
+                            mouseTracking
+                            infinite
+                            swipeDelta={5}
+                            paddingLeft={35}
+                        />
+                    </div>
                 </div>
-                <div className='section__body'>
-                    <AliceCarousel 
-                        items={items} 
-                        responsive={responsive} 
-                        mouseTracking
-                        infinite
-                        swipeDelta={5}
-                        paddingLeft={35}
-                    />
-                </div>
-            </div>
         </div>
     );
 }

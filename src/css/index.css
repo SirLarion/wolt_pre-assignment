@@ -20,6 +20,8 @@ body {
 .wrapper--85 { width: 85%; }
 .wrapper--100 { width: 100%; }
 
+.hidden { display: none; }
+
 .noselect {
   -webkit-touch-callout: none; 
     -webkit-user-select: none; 

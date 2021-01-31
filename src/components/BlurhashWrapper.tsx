@@ -13,7 +13,10 @@ interface Props {
 }
 
 //===================================================================/
-
+/*
+ * Wrapper for the Blurhash element. Contains the Blurhash itself and a mask
+ * image that displays whether the restaurant is offline
+ */
 const BlurhashWrapper: React.FC<Props> = ({hash, online}) => {
 
     const bhWidth = isWide() ? 300 : 230;
@@ -27,7 +30,7 @@ const BlurhashWrapper: React.FC<Props> = ({hash, online}) => {
             'blurhash--normal' : 'blurhash--small'
         )}>
             <img 
-                src={isWide() ? imgOffline : imgOfflineSmall} 
+                src={isWide() ? imgOffline : imgOfflineSmall}
                 draggable={false}
                 className={'blurhash__mask '.concat(online ? 
                     'blurhash__mask--online' : 'blurhash__mask--offline'

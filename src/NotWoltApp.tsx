@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 import './css/App.css';
 
@@ -30,9 +31,15 @@ function toSection(sectionData: SectionType, index: number) {
 const NotWoltApp: React.FC = () => {
     const sections = data['sections'];
 
+    const [reload, setReload] = useState(0);
+
+    document.body.onresize = () => setReload(reload+1);
+
     return (
         <div className='app'>
-            <div role='wrapper' className={ 'app__wrapper '.concat(isWide() ? 
+            <div 
+                role='wrapper' 
+                className={ 'app__wrapper '.concat(isWide() ? 
                     'wrapper--85' : 'wrapper--100')
             }>
                 <div className='app__header'>
