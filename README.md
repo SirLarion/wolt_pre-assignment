@@ -14,6 +14,7 @@ cd wolt_pre-assignment
 npm clean-install
 npm start
 ```
+The page is then available in localhost:3000
 
 ### Building
 
