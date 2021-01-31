@@ -7,7 +7,7 @@ Built with Node, React and TypeScript. Uses react-alice-carousel for the carouse
 
 ### Quick start
 
-Clone the repository and run 'npm clean-install' and 'npm start' inside it
+Clone the repository (or download as .zip file and extract) and run 'npm clean-install' and 'npm start' inside it
 ```
 git clone https://github.com/SirLarion/wolt_pre-assignment.git
 cd wolt_pre-assignment
