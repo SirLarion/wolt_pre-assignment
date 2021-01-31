@@ -29,7 +29,8 @@ function toRestaurantCard(restaurant: RestaurantType, index: number) {
 const responsive = {
     1: { items: 1 },
     560: { items: 2 },
-    1300: { items: 4 }
+    1300: { items: 3 },
+    1800: { items: 4 }
 };
 
 
