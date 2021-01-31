@@ -3,8 +3,7 @@
 <img src=notwolt_screencap.png />
 
 ## Technologies & dependencies
-
-Based on Node, React and TypeScript. Uses react-alice-carousel for the carousel element, react-blurhash for the Blurhash restaurant 'image' and Jest + testing-library-react for tests.
+Built with Node, React and TypeScript. Uses react-alice-carousel for the carousel element, react-blurhash for the Blurhash restaurant 'image' and Jest + testing-library-react for tests.
 
 ### Quick start
 
